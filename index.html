@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Snake Game</h1>
+        
+        <div class="player-info" id="playerInfo">
+            <input type="text" id="playerName" placeholder="Enter your name" maxlength="15">
+            <button id="saveName">Save Name</button>
+        </div>
+
+        <div class="score-container">
+            <div class="score">
+                <span>Score: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="high-score">
+                <span>High Score: </span>
+                <span id="highScore">0</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="controls">
+            <button id="startBtn">Start Game</button>
+            <button id="showLeaderboard">Show Leaderboard</button>
+            <div class="mobile-controls">
+                <button id="upBtn">↑</button>
+                <div class="horizontal-controls">
+                    <button id="leftBtn">←</button>
+                    <button id="rightBtn">→</button>
+                </div>
+                <button id="downBtn">↓</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaderboard Popup -->
+    <div class="leaderboard-popup" id="leaderboardPopup">
+        <div class="leaderboard-content">
+            <h2>Leaderboard</h2>
+            <button class="close-leaderboard" id="closeLeaderboard">×</button>
+            <div id="leaderboardList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
